@@ -7351,6 +7351,9 @@ body.navbar-is-fixed-bottom {
   border-color: #5dcef5;
   background-color: #5dcef5;
 }
+.paragraph--type-events-and-news-section .field--name-field-event .field--name-field-event-link {
+  display: none;
+}
 /**
  * jQuery UI autocomplete widget style overrides.
  *
