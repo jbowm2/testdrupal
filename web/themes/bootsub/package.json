@@ -1,0 +1,12 @@
+{
+  "name": "bootsub",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^1.1.0",
+    "browser-sync": "^2.12.5",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

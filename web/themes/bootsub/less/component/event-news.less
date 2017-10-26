@@ -1,0 +1,57 @@
+.paragraph--type-events-and-news-section {
+  width: 100%;
+  //height: auto;
+
+  .field--name-field-event {
+    display: inline-flex;
+
+    .paragraph--type--event {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .field--name-field-event-image {
+      height: 300px;
+
+      img {
+        //position: absolute;
+        width: max-content;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .field--name-field-event-date {
+      position: absolute;
+      padding-bottom: 35px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.3em;
+    }
+
+    .field--name-field-event-title {
+        position: absolute;
+        padding-bottom: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.3em;
+        width: 80%;
+    }
+
+    .field--name-field-event-type {
+      position: absolute;
+      padding: 5px 8px;
+      text-transform: uppercase;
+      font-size: medium;
+      border: solid 2px;
+      border-color: #5dcef5;
+      background-color: #5dcef5;
+
+    }
+  }
+}

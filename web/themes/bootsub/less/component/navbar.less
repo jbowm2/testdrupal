@@ -1,0 +1,308 @@
+/**
+ * Navbar styling.
+ */
+@mobile:          ~"screen and (max-width: @{screen-xs-max})";
+@tablet:          ~"screen and (min-width: @{screen-sm-min})";
+@normal:          ~"screen and (min-width: @{screen-md-min})";
+@wide:            ~"screen and (min-width: @{screen-lg-min})";
+@grid-breakpoint: ~"screen and (min-width: @{grid-float-breakpoint})";
+
+body {
+  // Fix horizontal scrolling on iOS devices.
+  // http://drupal.org/node/1870076
+  position: relative;
+
+  &.navbar-is-static-top {
+    margin-top: 0;
+  }
+  &.navbar-is-fixed-top {
+    margin-top: (@navbar-height + (@grid-gutter-width / 2));
+  }
+  &.navbar-is-fixed-bottom {
+    padding-bottom: (@navbar-height + (@grid-gutter-width / 2));
+  }
+
+  @media @tablet {
+    // margin-top: (@grid-gutter-width / 2);
+  }
+  @media @mobile {
+    &.toolbar-vertical {
+      &.navbar-is-fixed-top,
+      &.navbar-is-fixed-bottom {
+        .toolbar-bar {
+          position: fixed;
+        }
+        header {
+          z-index: 500;
+        }
+      }
+      // Default toolbar fixed height value.
+      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+      &.navbar-is-fixed-top header {
+        top: 39px;
+      }
+    }
+  }
+}
+
+.navbar {
+  margin-bottom:0px;
+}
+
+.navbar.container {
+  @media @tablet {
+    max-width: ((@container-sm - @grid-gutter-width));
+  }
+  @media @normal {
+    max-width: ((@container-md - @grid-gutter-width));
+  }
+  @media @wide {
+    max-width: ((@container-lg - @grid-gutter-width));
+  }
+}
+
+// Branding.
+.navbar .logo {
+  margin-right: -(@grid-gutter-width / 2);
+  padding-left: (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+  @media @grid-breakpoint {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+.navbar-default {
+  border:0px;
+  background-color:#FFFFFF;
+
+  // Branding
+  .navbar-header {
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    width:100%;
+
+    .region-navigation {
+      width:100%;
+      .navbar-brand, .navbar-btn {
+        color:#133562;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+      }
+
+      .navbar-brand {
+        height:auto;
+      }
+
+      .navbar-btn {
+        //padding-top:10px;
+        //padding-bottom:10px;
+        padding-left: 20px;
+        width:80%;
+        max-width:550px;
+        display:block;
+        float:left;
+        img {
+          width:100%;
+          padding-left: 50px;
+        }
+      }
+    }
+
+    @media @tablet {
+      width:100%;
+      display:block;
+      .region-navigation {
+        text-align: center;
+        .navbar-brand, .navbar-btn {
+          padding-left: 20px;
+          height:auto;
+          display:inline-block;
+          width:100%;
+        }
+        .navbar-btn {
+          float:none;
+        }
+      }
+    }
+  }
+
+  // Main Menu
+  .navbar-collapse {
+    background-color:#133562;
+    //border-top:4px solid #fff;
+    //border-bottom:4px solid #fff;
+    clear:both;
+
+    .region-navigation-collapsible .navbar-nav {
+      padding-top:5px;
+      padding-bottom:5px;
+      > li {
+        a {
+          color:#fff;
+          padding-top:5px;
+          padding-bottom:5px;
+          text-transform: uppercase;
+          padding-left: 20px;
+          padding-right:20px;
+          font-size: medium;
+          font-weight: bold;
+          span.title {
+            padding-bottom:3px;
+            border-color:transparent;
+            transition:border-color .25s ease-in-out;
+          }
+          span.carrot {
+            opacity:0;
+          }
+          &:hover span.title {
+            opacity:.8;
+            border-bottom:3px solid #fff;
+          }
+        }
+        &.active > a, &.open > a {
+          background-color:transparent;
+          span.title {
+            border-bottom:3px solid #FF0000;
+          }
+        }
+        .dropdown-menu li {
+          a:hover, a:focus {
+            color:#fff;
+          }
+        }
+      }
+    }
+
+    @media @tablet {
+      .region-navigation-collapsible {
+        .navbar-nav {
+          float:none;
+          text-align: center;
+          > li {
+            float:none;
+            display:inline-block;
+            .dropdown-menu {
+              padding-top:20px;
+              min-width:250px;
+              margin-top: 4px;
+              li {
+                // margin-bottom:.5em;
+                a {
+                  margin-bottom:0px;
+                  white-space: pre-wrap;
+                  padding-top:5px;
+                  padding-bottom:5px;
+                  span.title {
+                    display:block;
+                    border-bottom:3px solid transparent;
+                    padding-bottom:.1em;
+                  }
+                  &:hover {
+                    background-color:transparent;
+                    color:#333;
+                    span {
+                      border-color:#333 !important;
+                      border-bottom:3px solid #333;
+                    }
+                  }
+                }
+                &.active {
+                  a {
+                    background-color:transparent;
+                    span.title {
+                      border-bottom:3px solid #FF0000;
+                      display:block;
+                    }
+                  }
+                }
+                a {
+                  color:#333;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Hamburger Menu
+  .navbar-toggle {
+    background-color:#0000FF;
+    border:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    height:32px;
+    .icon-bar {
+      background-color:#fff;
+    }
+    &:hover, &:focus {
+      background-color:#0000FF;
+      .icon-bar {
+        background:rgba(255,255,255,.5);
+      }
+    }
+  }
+}
+
+.field--name-dynamic-block-fieldnode-side-bar-menu {
+  margin-bottom:1em;
+  margin-top:2em;
+  border-top:2px solid #333;
+  display:block;
+  padding-top:1em;
+  width:100%;
+  @media @normal {
+    border-top:0;
+
+    margin-top:0;
+  }
+  .field--label {
+    background-color:#0000FF;
+    color:#fff;
+    font-size:1.3em;
+    padding:10px 13px 8px 13px;
+    text-transform: uppercase;
+    display:block;
+    float:left;
+    font-family:@primaryFont;
+    font-weight:600;
+    margin-top:0px;
+    margin-bottom:1em;
+    display:none;
+    &.active {
+      display:block;
+    }
+  }
+  .navbar-nav {
+    clear:both;
+    margin-left:13px;
+    li {
+      float:left;
+      clear:both;
+      a {
+        display:inline-block;
+        font-weight:100;
+        font-size:1.3em;
+        padding:0px;
+        margin-bottom:.5em;
+        margin-top:.65em;
+        padding-bottom:3px;
+        color:#0000FF;
+        border-bottom: 3px solid transparent;
+      }
+      &.active a {
+        font-weight:700;
+        border-bottom:3px solid #FF0000;
+      }
+      &.active a, a:hover, a:focus {
+        background-color:transparent;
+        border-bottom:3px solid #d3d3d3;
+
+      }
+    }
+  }
+}
