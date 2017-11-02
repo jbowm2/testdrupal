@@ -1,34 +1,116 @@
 .paragraph--type--hero-slider-section {
 
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   text-align: center;
   color: black;
+
+  .wrapper {
+    width: 100%;
+    height: 90vh;
+    background-position: bottom center;
+  }
+
+  .overlay {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url('../images/herobackground.png');
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
   .field--name-field-slide-image {
 
     img {
       width: 100%;
-      height: 100vh;
+      height: 70vh;
+      display: none;
     }
   }
 
   .field--name-field-title {
-    position: absolute;
-    font-size: .5em;
-    top: 5%;
-    left: 50%;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    padding-top: 150px;
+    padding-left: 250px;
+    transform: translate(-10%, -10%);
+
+    @media @tablet {
+      font-size: 1.1em;
+    }
+
+    @media @mobile {
+      font-size: 1.85em;
+      text-align: center;
+    }
+
+    @media @normal {
+      font-size: 4.4em;
+    }
+
+    @media @wide {
+      font-size: 4.4em;
+    }
+  }
+
+  .field--name-field-blue-title {
+    font-weight: 600;
+    color: #5dcef5;
+    text-align: left;
+    padding-left: 250px;
+    padding-bottom: 35px;
     transform: translate(-10%, -50%);
+
+    @media @tablet {
+      font-size: 1.1em;
+    }
+
+    @media @mobile {
+      font-size: 1.85em;
+      text-align: center;
+    }
+
+    @media @normal {
+      font-size: 4.4em;
+    }
+
+    @media @wide {
+      font-size: 4.4em;
+    }
   }
 
   .field--name-field-slide-body {
-    position: absolute;
-    font-size: 2.0vw;
+    width: 70%;
+    font-weight: bold;
+    text-align: left;
+    line-height: 180%;
+    color: #fff;
     text-transform: uppercase;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 10px;
+    padding-left: 200px;
+    transform: translate(-10%, -50%);
+
+    @media @tablet {
+      font-size: .85em;
+    }
+
+    @media @mobile {
+      font-size: .8em;
+      text-align: center;
+    }
+
+    @media @normal {
+      font-size: 1.6em;
+    }
+
+    @media @wide {
+      font-size: 1.6em;
+    }
   }
 
 }
