@@ -2,11 +2,26 @@
   margin: auto;
   width: 70%;
 
+  .group-left {
+    @media @mobile {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .group-right {
+    @media @mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   .paragraph--type--content-side {
 
     .field--name-field-content-title {
       p {
-        font-size: 4.2em;
+        //font-size: 4.2em;
         font-weight: 600;
         text-align: left;
         color: grey;
@@ -15,17 +30,51 @@
       }
 
       span {
-          color: #5dcef5;
+          color: #53C3F0;
+      }
+
+      @media @tablet {
+        font-size: 1.1em;
+      }
+
+      @media @mobile {
+        font-size: 1.85em;
+        text-align: center;
+      }
+
+      @media @normal {
+        font-size: 4.2em;
+      }
+
+      @media @wide {
+        font-size: 4.2em;
       }
     }
 
     .field--name-field-content-body {
-      font-size: 1.4em;
+      //font-size: 1.4em;
       font-weight: 500;
       text-align: left;
       line-height: 180%;
       color: #727175;
       padding-bottom: 45px;
+
+      @media @tablet {
+        font-size: .85em;
+      }
+
+      @media @mobile {
+        font-size: .8em;
+        text-align: center;
+      }
+
+      @media @normal {
+        font-size: 1.4em;
+      }
+
+      @media @wide {
+        font-size: 1.4em;
+      }
     }
   }
 
@@ -52,6 +101,23 @@
           font-size: 1.7em;
           font-weight: 600;
           color: #fff;
+
+          @media @tablet {
+            font-size: .85em;
+          }
+
+          @media @mobile {
+            font-size: .8em;
+            text-align: center;
+          }
+
+          @media @normal {
+            font-size: 1.7em;
+          }
+
+          @media @wide {
+            font-size: 1.7em;
+          }
         }
       }
 

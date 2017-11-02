@@ -163,6 +163,16 @@
   </div>
 {% endblock %}
 
+{# Email Contact #}
+{% block email_form %}
+  <div class="email_form" id="email_form">
+    <div class="container">
+        {{ page.email_form }}
+    </div>
+  </div>
+
+{% endblock %}
+
 {% if page.footer_left or page.footer_right %}
   {% block footer_left %}
     <footer class="footer" role="contentinfo">

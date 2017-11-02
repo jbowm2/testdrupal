@@ -1,51 +1,90 @@
 .paragraph--type-events-and-news-section {
   width: 100%;
-  //height: auto;
 
   .field--name-field-event {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+
+    .event-square {
+      width: 25%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .blockinfo {
+      background-color: #5dcef5;
+      display: block;
+
+      .link-container {
+        margin:auto;
+        display: flex;
+
+        .events-link {
+          padding: 10px 20px;
+          border: 3px solid #fff;
+          margin: 0;
+        }
+
+        .news-link{
+          padding: 10px 20px;
+          border: 3px solid #fff;
+        }
+        a {
+          color: #fff;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
 
     .paragraph--type--event {
       position: relative;
       text-align: center;
       color: white;
+      height: 100%;
+
+      a{
+        display: flex;
+        height: 100%;
+        align-content: center;
+        flex-wrap: wrap;
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.5);
+        transition: background .2s ease-in-out;
+
+        &:hover {
+          background: transparent;
+        }
+      }
     }
 
     .field--name-field-event-image {
-      height: 300px;
-
       img {
-        //position: absolute;
-        width: max-content;
-        height: 100%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        display: none;
       }
     }
 
     .field--name-field-event-date {
-      position: absolute;
+      width: 100%;
+      padding-left: 35px;
+      padding-right: 35px;
       padding-bottom: 35px;
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       font-size: 1.3em;
     }
 
     .field--name-field-event-title {
-        position: absolute;
-        padding-bottom: 5px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      width:100%;
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-bottom: 5px;
         font-size: 1.3em;
-        width: 80%;
     }
 
     .field--name-field-event-type {
       position: absolute;
-      padding: 5px 8px;
+      top: 0;
+      padding: 5px 20px;
       text-transform: uppercase;
       font-size: medium;
       border: solid 2px;
@@ -54,8 +93,11 @@
     }
 
     .field--name-field-event-link {
-      display: none;
-    //  
+      width: max-content;
+      height: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }

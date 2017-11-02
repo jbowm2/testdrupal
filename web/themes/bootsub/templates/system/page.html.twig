@@ -68,6 +68,7 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       <div class="navbar-header">
+        <div class="container-fluid">
         {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
         {% if page.navigation_collapsible %}
@@ -79,14 +80,13 @@
           </button>
         {% endif %}
       </div>
-
+        </div>
       {# Navigation (collapsible) #}
       {% if page.navigation_collapsible %}
         <div id="navbar-collapse" class="navbar-collapse collapse">
           {{ page.navigation_collapsible }}
         </div>
       {% endif %}
-
 
     </header>
   {% endblock %}
@@ -155,6 +155,16 @@
       </section>
     </div>
   </div>
+{% endblock %}
+
+{# Email Contact #}
+{% block email_form %}
+  <div class="email_form" id="email_form">
+    <div class="container">
+      {{ page.email_form }}
+    </div>
+  </div>
+
 {% endblock %}
 
 {% if page.footer_left or page.footer_right %}

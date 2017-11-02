@@ -1,0 +1,157 @@
+
+.paragraph--type-feature-image-and-text {
+
+  .group-left {
+    @media @mobile {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .group-right {
+    @media @mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .field--name-field-image-side {
+
+    .paragraph--type--feature-image {
+
+      .field--type-image {
+
+        display: block;
+        float: right;
+        margin: 0 auto;
+        padding: 50px 30px 50px 90px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+
+        }
+
+        @media @mobile {
+          padding: 50px 30px 10px 30px;
+        }
+      }
+    }
+  }
+
+  .field--name-field-featured-text-side {
+
+    .paragraph--type--feature-text {
+
+      .field--name-field-feature-title {
+        //font-size: 4.2em;
+        font-weight: 600;
+        line-height: .9;
+        text-align: left;
+        color: grey;
+        padding-top: 45px;
+
+        @media @tablet {
+          font-size: 1.1em;
+        }
+
+        @media @mobile {
+          font-size: 1.85em;
+          text-align: center;
+        }
+
+        @media @normal {
+          font-size: 4.2em;
+        }
+
+        @media @wide {
+          font-size: 4.2em;
+        }
+      }
+
+      .field--name-field-featured-color-title {
+        //font-size: 4.2em;
+        font-weight: 600;
+        text-align: left;
+        color: #5dcef5;
+        padding-bottom: 25px;
+
+        @media @tablet {
+          font-size: 1.1em;
+        }
+
+        @media @mobile {
+          font-size: 1.85em;
+          text-align: center;
+        }
+
+        @media @normal {
+          font-size: 4.2em;
+        }
+
+        @media @wide {
+          font-size: 4.2em;
+        }
+      }
+
+      .field--name-field-featured-body {
+        font-size: 1.4em;
+        font-weight: 500;
+        text-align: left;
+        line-height: 180%;
+        color: #727175;
+        padding-right: 35px;
+        padding-bottom: 45px;
+
+        @media @tablet {
+          font-size: .85em;
+        }
+
+        @media @mobile {
+          font-size: .8em;
+          text-align: center;
+        }
+
+        @media @normal {
+          font-size: 1.4em;
+        }
+
+        @media @wide {
+          font-size: 1.4em;
+        }
+      }
+
+      .field--name-field-feature-link {
+        padding-bottom: 75px;
+
+        a {
+          font-size: 1.3em;
+          font-weight: 400;
+          border: solid 2px;
+          border-color: #184673;
+          background-color: #184673;
+          color: #fff;
+          padding: 16px 20px 16px 20px;
+
+          @media @tablet {
+            font-size: .85em;
+          }
+
+          @media @mobile {
+            font-size: .5em;
+            text-align: center;
+          }
+
+          @media @normal {
+            font-size: 1.3em;
+          }
+
+          @media @wide {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
+}
